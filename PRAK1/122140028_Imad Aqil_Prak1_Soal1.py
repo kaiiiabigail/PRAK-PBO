@@ -1,11 +1,12 @@
-jarijari = int(input("Inputkan jari-jari : "))
-phi = 3.14
+bawah= int(input("Inputkan Batas Bawah Yang Anda Inginkan : "))
+atas = int(input("Inputkan Batas Atas Yang Anda Ingnkan : "))
 
-if jarijari < 0 :
-    print("Maaf, jari-jari lingkaran tidak boleh negatif")
+if bawah < 0 or atas < 0 :
+    print("Maaf, batas bawah dan atas yang dimasukan tidak boleh di bawah nol")
 else :
-    luas = phi * jarijari ** 2
-    keliling = 2 * phi * jarijari
-
-    print("Luas lingkaran adalah : ", luas)
-    print("Keliling lingkaran adalah : ", keliling)
+    sum = 0
+    for x in range (bawah, atas) :
+        if x % 2 == 1 :
+            print(x)
+            sum += x
+    print("Total : ", sum)
